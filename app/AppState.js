@@ -1,10 +1,15 @@
 import Image from "./Models/Image.js";
+import Quote from "./Models/Quote.js";
 import { EventEmitter } from "./Utils/EventEmitter.js";
 import { isValidProp } from "./Utils/isValidProp.js";
 
 class AppState extends EventEmitter {
   /** @type {Image} */
   image = null
+
+  /**@type {Quote} */
+  quote = null
+
 
 
 
