@@ -4,7 +4,20 @@ export default class Quote {
     this.author = author
 
   }
+  get Template() {
+    return `
+  <div class="myDIV">
+    <h3>"${this.body}"</h3> 
+  </div>
+  <div class="hide">
+    <br><h4>-${this.author}</h4>
+</div>
+  
 
+  
+  
+  `
+  }
 }
 
 // Quote": {

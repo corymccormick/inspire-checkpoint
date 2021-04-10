@@ -1,5 +1,6 @@
-import { ProxyState } from "../AppState";
-import { sandboxApi } from "./AxiosService";
+import { ProxyState } from "../AppState.js";
+import Quote from "../Models/Quote.js";
+import { sandboxApi } from "./AxiosService.js";
 
 
 
@@ -8,7 +9,11 @@ class QuotesService {
   //get-appending to base url
   async getQuote() {
     let res = await sandboxApi.get('quotes')
-    console.log("initial response:", res);
+    console.log(res)
+    ProxyState.quote = new Quote(res.data)
+
+
+
   }
 
 }

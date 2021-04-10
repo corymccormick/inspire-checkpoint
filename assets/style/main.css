@@ -10695,4 +10695,12 @@ main {
   flex-grow: 1;
 }
 
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+}
+
 /*# sourceMappingURL=main.css.map */
