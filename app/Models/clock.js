@@ -14,7 +14,7 @@ export default class Clock {
     currentHours = (currentHours == 0) ? 12 : currentHours;
 
     let currentTimeString = currentHours + ":" + currentMinutes + timeOfDay;
-    return `<span>${currentTimeString}</span>`
+    return `<span><h1>${currentTimeString}</h1></span>`
 
   }
 }
