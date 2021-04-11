@@ -8,6 +8,8 @@ function drawImage() {
   document.getElementById('images').style['background-image'] = `url(${image.url})`
   document.getElementById('images').style['background-size'] = 'cover'
 
+
+
 }
 
 

@@ -9,7 +9,6 @@ class QuotesService {
   //get-appending to base url
   async getQuote() {
     let res = await sandboxApi.get('quotes')
-    console.log(res)
     ProxyState.quote = new Quote(res.data)
 
 
