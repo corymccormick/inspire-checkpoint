@@ -11,11 +11,18 @@ export default class WeatherContoller {
 
   constructor() {
     ProxyState.on("weather", drawWeather)
+    ProxyState.on("tempscale", drawWeather)
     this.getWeather()
+    this.toggleTempScale()
+
   }
 
   getWeather() {
     weatherService.getWeather()
+  }
+
+  toggleTempScale() {
+    weatherService.toggleTempScale()
   }
 
 }

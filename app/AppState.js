@@ -15,6 +15,8 @@ class AppState extends EventEmitter {
   /**@type {Weather} */
   weather = null
 
+  tempscale = "f"
+
   /**@type {Clock} */
   clock = null
 
