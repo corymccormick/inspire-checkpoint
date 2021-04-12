@@ -1,6 +1,7 @@
 import Image from "./Models/Image.js";
 import Quote from "./Models/Quote.js";
-import Weather from "./Models/Weather.js"
+import Weather from "./Models/Weather.js";
+import Todo from "./Models/Todo.js"
 import { EventEmitter } from "./Utils/EventEmitter.js";
 import { isValidProp } from "./Utils/isValidProp.js";
 
@@ -17,9 +18,9 @@ class AppState extends EventEmitter {
   /**@type {Clock} */
   clock = null
 
+  /**@type {Todo[]} */
+  todo = []
 
-
-  temperatureScale = ""
 
 
 

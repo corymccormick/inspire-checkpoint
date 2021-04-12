@@ -10,7 +10,7 @@ export default class {
 
   get Template() {
     return `
-    <div>
+    <div class="col text-right" >
 <h4> ${this.temp} <br> ${this.description} <br> ${this.name} </h4>
 </div>
   `
