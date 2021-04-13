@@ -1,4 +1,4 @@
-import TodoController from "./controllers/TodoController.js";
+import TodoController from "./Controllers/TodoController.js";
 import ClockController from "./Controllers/ClockController.js";
 import ImagesController from "./Controllers/ImagesController.js";
 import QuotesController from "./Controllers/QuotesController.js";
