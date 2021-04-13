@@ -5,7 +5,7 @@ import { todoService } from "../Services/TodoService.js";
 function drawTodo() {
   console.log(ProxyState.todo.length);
   // get uncompleteCount() {
-  let it = ProxyState.todo.filter(i => !i.completed)
+  let it = ProxyState.todo.filter(i => i.completed)
   // return it.length
   console.log(it.length)
   let template = ''
@@ -13,7 +13,7 @@ function drawTodo() {
     template += td.Template
   })
   document.getElementById('todo').innerHTML = template
-  document.getElementById('complete').innerHTML = `<div> it.length / ProxyState.todo.length </div>`
+  document.getElementById('complete').innerHTML = `${it.length}/${ProxyState.todo.length}`
 
 }
 export default class TodoController {
