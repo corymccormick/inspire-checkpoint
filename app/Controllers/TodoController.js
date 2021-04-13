@@ -3,11 +3,17 @@ import { todoService } from "../Services/TodoService.js";
 
 
 function drawTodo() {
+  console.log(ProxyState.todo.length);
+  // get uncompleteCount() {
+  let it = ProxyState.todo.filter(i => !i.completed)
+  // return it.length
+  console.log(it.length)
   let template = ''
   ProxyState.todo.forEach(td => {
-    template += /*html*/`<li class="cursor" onclick="app.todoController.getTodo('${td.id}')">${td.description}</li>`
+    template += td.Template
   })
   document.getElementById('todo').innerHTML = template
+  document.getElementById('complete').innerHTML = `<div> it.length / ProxyState.todo.length </div>`
 
 }
 export default class TodoController {
@@ -19,9 +25,23 @@ export default class TodoController {
     todoService.getTodo()
   }
 
-  addtodo() {
-    todoService.addTodo()
+  addTodo() {
+    window.event.preventDefault()
+    let form = window.event.target
+    let createTodo = {
+      description: form['description'].value,
+    }
+
+    todoService.addTodo(createTodo)
+    form.reset()
+    // form event make new object * jepordy-player controller
   }
+
+  updateTodo(id) {
+    todoService.updateTodo(id)
+  }
+
+
 
   removeTodo(id) {
     todoService.removeTodo(id)
